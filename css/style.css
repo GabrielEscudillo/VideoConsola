@@ -1,0 +1,399 @@
+body {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*index*/
+.start {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; 
+    border: solid 0.12em black;
+    padding: 0.5em 2em;
+    border-radius: 8em;
+    background-color: rgba(22, 163, 206, 0.37);
+    border-color: rgb(70, 70, 87);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+h3 {
+    position: absolute;
+    font-size: 4em;
+    color: white;
+}
+
+/*consola*/
+.home {
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; 
+    font-weight: bold;
+    border: solid 0.12em black;
+    padding: 0.5em 2em;
+    border-radius: 8em;
+    background-color: rgba(22, 163, 206, 0.37);
+    border-color: rgb(70, 70, 87);
+    font-size: 1.5em;
+}
+
+.console {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+}
+
+/*Mandos*/
+.leftside {
+    background-color: #67b9de;
+    width: 6.5vw;
+    height: 35vh;
+    border-radius: 4em 0em 0em 4em;
+    box-shadow: inset 10px 0px 10px -5px rgba(0, 0, 0, 0.6); 
+    position: relative;
+    box-shadow: 6px -6px -6px inset,
+    0 6px 3px #fff6 inset;
+}
+
+.l1 {
+    width: 5.7vw;
+    height: 28vh;
+    margin-bottom: 3.8vw;
+    margin-left: -39vw;
+    border-radius: 3.5em 0;
+    background: linear-gradient(45deg, rgb(51, 51, 51), rgb(32, 32, 32), rgb(51, 51, 51));
+    transition: background 0.3s ease;
+    box-shadow: 0.1s ease;
+    position: absolute;
+    z-index: -1;
+}
+
+.botonMenos {
+    position: absolute;
+    background-color: rgb(43, 42, 42);
+    width: 1vw;
+    height: 0.7vh;
+    top: 11%;
+    left: 80%;
+    background: linear-gradient(45deg, rgb(51, 51, 51), rgb(32, 32, 32), rgb(51, 51, 51));
+    transition: background 0.3s ease;
+    box-shadow: 0.1s ease;
+}
+
+.JoystickLeft {
+    border-radius: 50%;
+    border: 2px solid #000;
+    height: 7vh;
+    width: 3.5vw;
+    position: absolute;
+    top: 18%;
+    left: 24%;
+    box-shadow: 0 0 5px #000c;
+    background: linear-gradient(#4f4d4c,#161615);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.JoyInnerLeft {
+    width: 2.9vw;
+    height: 5.8vh;
+    background-color: #424348;
+    border-radius: 50%;
+    box-shadow: 
+        0 -1px 2px #0004 inset,
+        0 1px 2px #fff4 inset;
+    border: 1px solid #555;
+    transition: all 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55);}
+
+.JoyInnerLeft:active {
+    transform: translate(5px, 5px);
+}
+
+.botonUp, .botonLeft, .botonDown, .botonRight {
+    position: absolute; 
+    background-color: rgb(43, 42, 42);
+    display: flex;
+    width: 1.5vw;
+    height: 3vh;
+    border-radius: 7em;
+    border: solid rgb(0, 0, 0) 0.1em;
+    background: linear-gradient(45deg, rgb(51, 51, 51), rgb(32, 32, 32), rgb(51, 51, 51));
+    transition: background 0.3s ease;
+    box-shadow: 0.1s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+.botony:active, 
+.botonx:active, 
+.botonb:active, 
+.botona:active, 
+.botonUp:active, 
+.botonDown:active, 
+.botonLeft:active, 
+.botonRight:active, 
+.botonMas:active, 
+.botonMas2:active, 
+.botonMenos:active {
+    background: linear-gradient(45deg, rgb(20, 20, 20), rgb(51, 51, 51), rgb(20, 20, 20));
+}
+
+.botonUp {
+    top: 47%; 
+    left: 40%; 
+}
+
+.botonLeft {
+    top: 56%;
+    left: 19%;
+}
+
+.botonDown {
+    top: 65%;
+    left: 40%;
+}
+
+.botonRight {
+    top: 56%;
+    left: 62%;
+}
+
+#triangleUp {
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 9px solid rgb(97, 97, 97);
+    position: absolute;
+}
+
+#triangleLeft {
+    border-top: 7px solid transparent;
+    border-right: 9px solid rgb(97, 97, 97);
+    border-bottom: 7px solid transparent;
+    position: absolute;
+}
+
+#triangleRight {
+    border-top: 7px solid transparent;
+    border-right: 9px solid rgb(97, 97, 97);
+    border-bottom: 7px solid transparent;
+    position: absolute;
+    transform: rotateY(180deg);
+}
+
+#triangleDown {
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 9px solid rgb(97, 97, 97);
+    position: absolute;
+    transform: rotate(180deg);
+}
+
+
+.rightside {
+    background-color: #de5e53;
+    width: 6.5vw;
+    height: 35vh;
+    border-radius: 0em 4em 4em 0em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -6px -6px 6px #0006 inset,
+    0 6px 3px #fff6 inset;
+}
+
+.r1 {
+    width: 5.7vw;
+    height: 28vh;
+    margin-bottom: 3.8vw;
+    margin-left: 39vw;
+    border-radius: 0 3.5em;
+    background: linear-gradient(45deg, rgb(51, 51, 51), rgb(32, 32, 32), rgb(51, 51, 51));
+    transition: background 0.3s ease;
+    box-shadow: 0.1s ease;
+    position: absolute;
+    z-index: -1;
+}
+
+.botonMas, .botonMas2 {
+    background-color: rgb(43, 42, 42);
+    position: absolute;
+    background: linear-gradient(45deg, rgb(51, 51, 51), rgb(32, 32, 32), rgb(51, 51, 51));
+    transition: background 0.3s ease; 
+    box-shadow: 0.1s ease;
+}
+
+.botonMas {
+    background-color: rgb(43, 42, 42);
+    width: 1vw;
+    height: 0.7vh;
+    top: 11%;
+    left: 5%;
+}
+
+.botonMas2 {
+    background-color: rgb(43, 42, 42);
+    width: 0.3vw;
+    height: 2vh;
+    top: 9.3%;
+    left: 10%;
+}
+
+.botony, .botonx, .botonb, .botona {
+    position: absolute; 
+    background-color: rgb(43, 42, 42);
+    display: flex;
+    width: 1.5vw;
+    height: 3vh;
+    border-radius: 7em;
+    border: solid rgb(0, 0, 0) 0.1em;
+    color: rgb(184, 183, 183);
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, rgb(51, 51, 51), rgb(32, 32, 32), rgb(51, 51, 51));
+    transition: background 0.3s ease;
+    box-shadow: 0.1s ease;
+}
+
+.botonx {
+    top: 23%; 
+    left: 35%; 
+}
+
+.botony {
+    top: 32%;
+    left: 14%;
+}
+
+.botonb {
+    top: 41%;
+    left: 35%;
+}
+
+.botona {
+    top: 32%;
+    left: 57%;
+}
+
+.JoystickRight {
+    border-radius: 50%;
+    border: 2px solid #000;
+    height: 7vh;
+    width: 3.5vw;
+    position: absolute;
+    top: 57%;
+    left: 19%;
+    box-shadow: 0 0 5px #000c;
+    background: linear-gradient(#4f4d4c,#161615);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.JoyInnerRight {
+    width: 2.9vw;
+    height: 5.8vh;
+    background-color: #424348;
+    border-radius: 50%;
+    box-shadow: 
+        0 -1px 2px #0004 inset,
+        0 1px 2px #fff4 inset;
+    border: 1px solid #555;
+    transition: all 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.JoyInnerRight:active,
+.l1:active {
+        transform: translate(5px, 5px); 
+}
+
+/*pantalla*/
+.screen {
+    background: linear-gradient(to top, #272828 2%, #333436 3% 97%, #555555 99%);
+    width: 40%;
+    height: 35vh;
+    border-radius: 1em 1em 0.4em 0.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame {
+    width: 93%;
+    height: 30vh;
+    background-color: #000000;
+    border-radius: 0.3em;
+    border: solid 0.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gamepad {
+    width: 25vw;
+    height: 25vh;
+    background: linear-gradient(to bottom, #333333, #757575); 
+    margin: 16px;
+    border: solid 0.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*BotonEncendido*/
+.OnOff {
+    position: absolute;
+    width: 1.9vw;
+    height: 2.1vh;
+    background-color: rgb(66, 66, 66);
+    top: 0.1%;
+    left: 32%;
+    color: rgb(196, 194, 194);
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #555;
+    transition: all 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.OnOff:active {
+    transform: translate(5px, 5px); 
+}
+
+.r1:active {
+    transform: translate(-5px, 5px); 
+}
+
