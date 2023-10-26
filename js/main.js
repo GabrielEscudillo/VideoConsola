@@ -1,23 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
     let onOffButton = document.getElementById('onOffButton');
     let gamepad = document.querySelector('.gamepad');
-    let isGifVisible = false; // Variable para rastrear si el GIF está visible
-    let originalGamepadStyle = gamepad.style.cssText; // Guarda las propiedades CSS originales
-    let imageIndex = 0; // Índice para rastrear qué imagen se debe mostrar
+    let isGifVisible = false; // Ver si el GIF está visible
+    let originalGamepadStyle = gamepad.style.cssText; // vuelve a la pantalla inicial
+    let imageIndex = 0; // Aqui rastreo la imagen se debe mostrar
 
-    // Lista de nombres de archivos de imágenes en tu carpeta "img"
+    // Lista de imagenes "img"
     let imageFiles = ['../img/animals.gif', '../img/jump.gif', '../img/mario.gif', '../img/mariokart.gif'];
 
     onOffButton.addEventListener('click', function() {
-        // Si el GIF está visible, quítalo y restaura las propiedades originales
         if (isGifVisible) {
             gamepad.style.backgroundImage = 'none';
             gamepad.style.cssText = originalGamepadStyle;
         } else {
-            // Si el GIF no está visible, muéstralo y marca el estado como encendido
             gamepad.style.backgroundImage = 'url("../img/start.gif")';
         }
-        // Cambia el estado de la visibilidad del GIF
         isGifVisible = !isGifVisible;
     });
 
