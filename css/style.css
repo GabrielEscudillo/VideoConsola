@@ -72,6 +72,7 @@ h3 {
     width: 80vw;
 }
 
+
 /*Mandos*/
 .leftside {
     background-color: #67b9de;
@@ -83,6 +84,7 @@ h3 {
     box-shadow: 6px -6px -6px inset,
     0 6px 3px #fff6 inset;
 }
+
 
 .l1 {
     width: 5.7vw;
@@ -232,6 +234,7 @@ h3 {
     0 6px 3px #fff6 inset;
 }
 
+
 .r1 {
     width: 5.7vw;
     height: 28vh;
@@ -347,6 +350,7 @@ h3 {
     align-items: center;
 }
 
+
 .frame {
     width: 93%;
     height: 30vh;
@@ -371,6 +375,7 @@ h3 {
     background-repeat: no-repeat;
     background-position: center;
 }
+
 
 /*BotonEncendido*/
 .OnOff {
@@ -397,3 +402,57 @@ h3 {
     transform: translate(-5px, 5px); 
 }
 
+@media screen and (max-width: 1080px) {
+    .frame {
+        width: 55vw;
+        height: 26vh;
+    }
+}
+@media screen and (max-width: 1080px) {
+    .gamepad {
+        width: 55vw;
+        height: 22vh;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .rightside {
+        width: 14vw;
+        height: 30vh;
+    }
+}
+
+
+@media screen and (max-width: 1080px) {
+    .leftside {
+        width: 14vw;
+        height: 30vh;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .console {
+        width: 150vw;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .screen {
+    height: 30vh;    }
+}
+
+@media screen and (max-width: 1080px) {
+    .l1 {
+        top: -2%;
+        left: 50%;
+        width: 9vw;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .r1 {
+        top: -2%;
+        left: 45%;
+        width: 9vw;
+    }
+}
